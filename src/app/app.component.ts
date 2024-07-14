@@ -1,6 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { RouterModule, RouterOutlet } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { AppService } from './app.service';
 import { CommonModule } from '@angular/common';
 import { MinutesPipe } from './minutes.pipe';
@@ -19,5 +19,4 @@ export class AppComponent implements OnInit {
    
   }
 
-  
 }
