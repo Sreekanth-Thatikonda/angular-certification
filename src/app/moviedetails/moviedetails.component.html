@@ -1,0 +1,43 @@
+<header>
+  <button routerLink="/movieList" class="button">Back</button>
+</header>
+<ng-container *ngIf="movieDetails$ |async as movieDetails">
+  <div class="container">
+    <h2>{{ movieDetails.title }}</h2>
+    <div class="row">
+      <div class="col-md-3">
+        <img [src]="movieDetails.poster" alt="Description of the image" />
+      </div>
+      <div class="col-md-9">
+        <h5>Summary:</h5>
+        {{ movieDetails.summary }}
+      </div>
+    </div>
+
+    <table class="horizontal">
+      <caption>
+        Details
+      </caption>
+      <thead>
+        <tr>
+          <th>Box office</th>
+          <th>Budget</th>
+          <th>Duration</th>
+          <th>Producers</th>
+          <th>Cinematographers</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-label="Name">${{ movieDetails.box_office }} million</td>
+          <td data-label="Surname">${{ movieDetails.budget }} million</td>
+          <td data-label="Alias">{{ movieDetails.duration | minutes }}</td>
+          <td data-label="Alias">{{ movieDetails.producers.join(", ") }}</td>
+          <td data-label="Alias">
+            {{ movieDetails.cinematographers.join(", ") }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</ng-container>
