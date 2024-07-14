@@ -62,7 +62,7 @@ export class MovielistComponent {
   filterMovies(data: searchCriteria) {
     console.log(data)
     this.tempMovies = this.movies.filter((movie: MovieDetails) => {
-     return data.title ?  movie.title.toLowerCase().includes(data.title.toLowerCase()): true  && data.year ? (Number(movie.release_date.substring(0,4)) === data.year) : true;
+     return ((data.title ?  movie.title.toLowerCase().includes(data.title.toLowerCase()): true)  && (data.year ? (Number(movie.release_date.substring(0,4)) === data.year) : true));
     })
 
     console.log(this.tempMovies)
