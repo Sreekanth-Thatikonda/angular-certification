@@ -1,7 +1,5 @@
-<header>
-  <button routerLink="/movieList" class="button">Back</button>
-</header>
-<ng-container *ngIf="movieDetails$ |async as movieDetails">
+<button routerLink="/movieList" class="fa fa-home"> Back</button>
+<ng-container *ngIf="movieDetails$ | async as movieDetails">
   <div class="container">
     <h2>{{ movieDetails.title }}</h2>
     <div class="row">
