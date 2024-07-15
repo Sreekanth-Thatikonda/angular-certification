@@ -66,7 +66,7 @@ export class MovielistComponent {
     })
   }
 
-  trackMovieId(index: number, movie: any ) {
+  trackMovieId(index: number, movie: MovieDetails ) {
     return movie.id;
   }
 }
